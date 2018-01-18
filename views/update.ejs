@@ -1,0 +1,36 @@
+<html>
+        <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <title>Edit Dog</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+        <div id="row">
+            <div class="panel panel-default">
+
+                 <h2>Dogs</h2>
+                 <h4><a href="/">All dogs</a></h4>
+
+            </div>
+            <div class="panel-body">
+            <form class="form-inline" action="/update/<%= dog.id %>" method="post">
+              
+                <p>
+                    <label for="name">Name:</label>
+                    <input class="form-control" type="text" name="name" value="<%= dog.name%>">
+                </p>
+                <p>
+                    <label for="breed">Breed:</label>
+                    <input class="form-control" type="text" name="breed" value="<%= dog.breed %>">
+                </p>
+                <input type="submit" class="btn btn-default" value="Update">
+                <button class="btn btn-default"><a href="/">Cancel</a></button>
+            </form>
+            </div>
+            
+        </div>
+        </body>
+        </html>
